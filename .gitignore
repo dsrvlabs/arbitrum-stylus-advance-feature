@@ -1,0 +1,33 @@
+# Rust 빌드 디렉토리 (모든 하위 폴더 포함)
+**/target/
+
+# Rust 의존성 파일 (모든 하위 폴더 포함)
+**/*.rs.bk
+**/Cargo.lock
+
+# IDE 관련 파일
+.idea/
+.vscode/
+**/.idea/
+**/.vscode/
+**/*.swp
+**/*.swo
+
+# macOS 시스템 파일
+.DS_Store
+**/.DS_Store
+
+# 디버그 파일
+**/*.pdb
+
+# 환경 변수 파일
+.env
+.env.local
+**/.env
+**/.env.local
+
+# 로그 파일
+**/*.log
+
+# Node.js 의존성 (모든 하위 폴더 포함)
+**/node_modules/

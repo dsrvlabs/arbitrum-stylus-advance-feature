@@ -1,0 +1,36 @@
+[package]
+name = "stylus_counter_v0_8_3"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[lib]
+name = "stylus_counter_v0_8_3"
+path = "src/lib.rs"
+crate-type = ["lib", "cdylib"]
+
+[[bin]]
+name = "stylus_counter_v0_8_3"
+path = "src/main.rs"
+
+[dependencies]
+stylus-sdk = { version = "0.8.3", features = ["mini-alloc"] }
+alloy-primitives = "0.8.20"
+alloy-sol-types = "0.8.20"
+hex = "0.4.3"
+
+[profile.release]
+codegen-units = 1
+strip = true
+lto = true
+panic = "abort"
+opt-level = "s"
+
+[features]
+export-abi = ["stylus-sdk/export-abi"]
+debug = ["stylus-sdk/debug"]
+
+[profile.dev]
+opt-level = 0
+debug = true 
